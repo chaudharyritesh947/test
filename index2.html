@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+
+ <link rel="stylesheet" href="new/css/reset1.css"> 
+  <link rel="stylesheet" href="new/css/style1.css"> 
+  <script src="new/js/modernizr1.js"></script> 
+
+ 
+<link rel="stylesheet" type="text/css" href="css/clock.css">    
+  <title>HomePage</title>
+   
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/clock.js"></script>
+    <script type="text/javascript" src="js/cycle2.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="moderate.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/ani.css">
+</head>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    #container {
+      margin-top: 100px;
+        position: absolute;
+        width: 100%;
+        height: 704px;
+        overflow: hidden;
+
+    }
+    #slideshow {
+        height: 100%;
+        width: 100%;
+    }
+    #slideshow img {
+        position: absolute;
+        height: 600px;
+        width: 100%;
+    }
+    #pager {
+        text-align: center;
+        height: 120px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        background: rgba(0,0,0,.5);
+        z-index: 1000;
+        opacity: 0;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    #pager:hover {
+       opacity: 1;
+    }    
+    
+    #prev {
+        height: 85px;
+        width: 85px;
+        position: absolute;
+        top: -25%;
+        bottom: 0;
+        left:0;
+        margin: auto 10px;
+        z-index: 1000;
+    }
+     #next {
+        height: 85px;
+        width: 85px;
+        position: absolute;
+        top: -25%;
+        bottom: 0;
+        right:0;
+        margin: auto 10px;
+      z-index: 1000;
+    }
+    #next:hover,#prev:hover{
+      cursor: pointer;
+    }
+    
+    #pager img {
+    margin: 10px 5px;
+    opacity:0.3;
+    transition:all .3s ease-in-out 0s;
+    }
+  #pager img:hover {
+    opacity:1;
+    transform:scale(1.05);
+    z-index:100;
+    }
+    </style>
+</head>
+<body>
+   
+<div id="head">
+  <header>
+
+     <div class="cd-logo"><a href="http://www.lpu.in/"><img src="img/lpu.png" id="lpu" alt="Logo"></a></div>
+
+    <nav class="cd-main-nav-wrapper">
+      <ul class="cd-main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="front/front.html">Projects</a></li>
+        <li><a href="#media">About</a></li>
+        <li><a href="#icons">Contact</a></li>
+        <li>
+          <a href="#0" class="cd-subnav-trigger"><span>Categories</span></a>
+
+          <ul>
+            <li class="go-back"><a href="front/front.html #section1">Menu</a></li>
+            <li><a href="front/front.html #section2">Energy</a></li>
+            <li><a href="front/front.html #section3">Water Use</a></li>
+            <li><a href="front/front.html #section4">Buildings</a></li>
+            <li><a href="front/front.html #section5">Transportation</a></li>
+            <li><a href="front/front.html #section6">Well Being</a></li>
+            <li><a href="front/front.html #section1" class="placeholder">Placeholder</a></li>
+          </ul>
+        </li>
+      </ul> 
+    </nav> 
+    
+    <a href="front/front.html #section1" class="cd-nav-trigger">Menu<span></span></a>
+  </header>
+
+</div>
+  <script src="new/js/jquery-2.1.1.js"></script>
+<script src="new/js/main.js"></script>
+    
+
+<div id="container">
+    <div id="slideshow" class="cycle-slideshow"
+       data-cycle-fx = "fade"
+       data-cycle-speed = "600"
+       data-cycle-timeout = "3000"
+       data-cycle-pager = "#pager"
+       data-cycle-pager-template ="<a herf='#'><img src='{{src}}' height=100 width=150/>"
+       data-cycle-next = "#next"
+       data-cycle-prev = "#prev"
+       data-cycle-manual-fx = "scrollHorz"
+       data-cycle-manual-speed = "400"
+       data-cycle-pager-fx = "fade">
+       <img src="img/keys.jpg" alt="">
+        <img src="img/back.jpg" alt="">
+        <img src="img/Awesome%20Mountain.jpg" alt="">
+        <img src="img/kk.jpg" alt="">
+        <img src="img/ss.jpg" alt="">
+    </div>
+    <div id="pager"></div>
+    <img id="prev" src="img/prev1.png"/>
+    <img id="next" src="img/next1.png"/>
+</div>
+
+  
+  
+
+
+
+<div><h1 id="mm" class="wow flip"><span>ISR & </span>Sustanibility </h1></div>
+<div id="nn"><h2 class="wow fadeInRightBig"><span>What we stand for is</span> what we stand on!</h2></div>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script>
+$(document).ready(function() {
+		$(document).delegate('.open', 'click', function(event){
+			$(this).addClass('oppenned');
+			event.stopPropagation();
+		})
+		$(document).delegate('body', 'click', function(event) {
+			$('.open').removeClass('oppenned');
+		})
+		$(document).delegate('.cls', 'click', function(event){
+			$('.open').removeClass('oppenned');
+			event.stopPropagation();
+		});
+	});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<div id="yo">
+<div class="a" >
+  <img src="./images/a.jpg" class="wow fadeInLeftBig">
+  <h1 class="wow fadeInRightBig">Our Targets and Goals</h1>
+    <p class="wow slideInUp">We basically focus more upon developement of environmental socity with educated people rather than a social environment by educated people.</p>
+</div>
+<div class="b">
+  <img src="./images/b.jpg" class="wow fadeInUpBig">
+  <h1 class="wow fadeInDownBig">Students Involvement</h1>
+  <p class="wow slideInRight">Students of L.P.U always play a key role in every part of developement and so they do towards our environment too.</p>
+</div>
+
+
+<div id="quote">
+  <h2 class="wow bounceInUp"><span>Instead</span> of controlling the environment for the benefit of the population.</h2>
+  <br><h2 class="wow bounceInDown"><span>Perhaps</span> it's time we control the population for the survival of environment.</h2>
+</div>
+
+  <div id="my">
+    <div id="progressbar"></div>
+    <div id="clock">
+      <span class="word on">It</span>
+      <span class="word nbsp"></span>
+      <span class="word on">is</span>
+      <span class="word nbsp"></span>
+      <span class="word" id="m_20">twenty</span>
+      <br />
+      <span class="word" id="m_15">quarter</span>
+      <span class="word nbsp"></span>
+      <span class="word" id="m_30">half</span>
+      <br />
+      <span class="word" id="m_10">ten</span>
+      <span class="word" id="m_5">five</span>
+      <span class="word nbsp"></span>
+      <span class="word" id="past">past</span>
+      <br />
+      <span class="word" id="to">to</span>
+      <span class="word nbsp"></span>
+      <span class="word" id="h_0">twelve</span>
+      <span class="word" id="h_1">one</span>
+      <br />
+      <span class="word" id="h_2">two</span>
+      <span class="word" id="h_3">three</span>
+      <span class="word" id="h_4">four</span>
+      <br />
+      <span class="word" id="h_5">five</span>
+      <span class="word" id="h_6">six</span>
+      <span class="word" id="h_7">seven</span>
+      <br />
+      <span class="word" id="h_8">eight</span>
+      <span class="word" id="h_9">nine</span>
+      <span class="word" id="h_10">ten</span>
+      <br />
+      <span class="word nbsp"></span>
+      <span class="word nbsp"></span>
+      <span class="word nbsp"></span>
+      <span class="word" id="h_11">eleven</span>
+      <span class="word nbsp"></span>
+      <span class="word nbsp"></span>
+      <span class="word nbsp"></span>
+      <br />
+      <span class="word nbsp"></span>
+      <span class="word" id="m_0">O'Clock</span>
+      <span class="word nbsp"></span>
+      <span class="word on">now</span>
+    </div>
+  </div>
+
+<div class="c">
+  <img src="./images/c.jpg" class="wow fadeInRightBig">
+    <h1 class="wow fadeInLeftBig">Events </h1>
+    <p class="wow slideInLeft">When there is a will there is always a way , join our events and help us to give a change to humanity , the change we all need the most.</p>
+</div>
+
+
+<div id="media">
+  <img src="images/map.jpg">
+  <h2><span id="isr" class="wow fadeInRightBig">ISR</span> ["Indian Sustainibility Research"] is an environmental health organization started by Lovely Professional University in India, which is not only just focused on developing the greenery of university with ecological and social methods but is more dedicated towards developing an socity with healthy and green environment. <br><br> <span id="re" class="wow fadeInUpBig">
+    REMEMBER </span><br><br><span id="need" class="wow fadeInLeftBig"> "Earth provides enough to satisfy every man's Needs but not every man's Greed"</span><br><br>
+    <span id="and" class="wow fadeInDownBig">AND</span><br><br><span id="life" class="wow fadeInLeftBig">"Earth was created for all Life, not just for Human life"</span> </h2>
+</div>
+
+<div class="video">
+  <video id="video" preload="auto" autoplay="true" loop="loop" muted="muted">
+    <source src="videos/video.mp4" type="video/mp4">
+      video not supported
+  </video>
+  
+</div>
+
+<div class="welcome">
+  <h1>ISR & Sustanibility welcomes you</h1>
+  <h2>Lets take a step ahed and serve our environment</h2>
+</div>
+
+
+<div class="d">
+  <h1><i class="fa fa-address-card-o" aria-hidden="true" id="address"></i> Campus Projects & Actions : </span></h1>
+  <div id="d1">
+    <a href="front/front.html #section2"><img src="./images/d1.png" class="wow slideInLeft hvr-bounce-out"></a>
+    <h2 class="wow fadeInUpBig"><i class="fa fa-sun-o hvr-icon-pulse-grow" aria-hidden="true"></i> Energy Saving</h2>
+  </div>
+  <div id="d2">
+    <a href="front/front.html #section5"><img src="./images/d2.jpg" class="wow fadeInRightBig hvr-bounce-out"></a>
+    <h2 class="wow fadeInUpBig"><i class="fa fa-motorcycle hvr-icon-pulse-grow" aria-hidden="true"></i> Transportation</h2>
+  </div>
+  <div id="d3">
+    <a href="front/front.html #section3"><img src="./images/d3.jpg" class="wow fadeInLeftBig hvr-bounce-out"></a>
+    <h2 class="wow fadeInUpBig"><i class="fa fa-tint hvr-icon-pulse-grow" aria-hidden="true"></i> Water Conservation</h2>
+  </div>
+    <div class="centerer">
+      <a href="front/front.html" class="button">Learn_more</a>
+    </div>
+  <div id="d4">
+    <a href="front/front.html #section4"><img src="./images/d4.jpg" class="wow fadeInRightBig hvr-bounce-out"></a>
+    <h2 class="wow fadeInDownBig"><i class="fa fa-building hvr-icon-pulse-grow" aria-hidden="true"></i> Buildings</h2>
+  </div>
+  <div id="d5">
+    <a href="front/front.html #section6"><img src="./images/d5.jpg" class="wow fadeInLeftBig hvr-bounce-out"></a>
+    <h2 class="wow fadeInDownBig"><i class="fa fa-users hvr-icon-pulse-grow" aria-hidden="true"></i> Well Being</h2>
+  </div>
+</div>
+<div id="icons">
+  <h1>Follow Us</h1>
+  <h2>Contact Us</h2><br><br>
+  <p>Phone : 8182001851</p>
+  	<ul>
+    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+    <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+  </ul><br>
+  <p>
+  Fax No. : 9056606034</p>
+  <br>
+  <span> Copyright &copy; 2017,  Lovely Professional University .  All Rights Reserved &trade; .</span>
+</div>
+
+
+
+</div>
+</body>
+
+  <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+
+</html>
+
